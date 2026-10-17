@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>找不到这一段 — MILES</title>
+<meta name="theme-color" content="#070706" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23070706'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' fill='%23eae3d5' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<style>
+  .notfound { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 0 var(--pad); }
+  .nf-code { font-family: var(--mono); font-size: 10px; letter-spacing: .34em; color: var(--ember); margin-bottom: 34px; }
+  .nf-title { font-size: clamp(2.2rem, 6vw, 5.4rem); font-weight: 300; line-height: 1.25; letter-spacing: .04em; }
+  .nf-note { margin-top: 30px; font-size: 13px; line-height: 2.1; letter-spacing: .08em; color: var(--ink-2); }
+  .nf-back { display: inline-flex; gap: 14px; margin-top: 54px; padding-bottom: 10px; border-bottom: 1px solid var(--line-strong); font-size: 15px; letter-spacing: .1em; }
+  .nf-back:hover { color: var(--ember); border-color: var(--ember); }
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<main class="notfound">
+  <p class="nf-code">ERROR 404 / LOST FOOTAGE</p>
+  <h1 class="nf-title">这一段胶片，<br />不在片盒里。</h1>
+  <p class="nf-note">也许它被剪掉了，也许它还没被拍出来。<br />回到开头，重新放映。</p>
+  <a class="nf-back" href="/"><span>回到首页</span><span aria-hidden="true">→</span></a>
+</main>
+</body>
+</html>

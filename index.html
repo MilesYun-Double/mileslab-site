@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>MILES · 剪辑师 — 用一首歌，体验一段人生</title>
+<meta name="description" content="Miles，剪辑师。每次用一首歌，去描述一部电影、一部剧、一群人，或者一段人生。人生是一场体验，让我们用一首歌，一起体验不同的人生。" />
+<meta name="theme-color" content="#070706" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="MILES · 剪辑师 — 用一首歌，体验一段人生" />
+<meta property="og:description" content="人生是一场体验。让我们用一首歌，一起体验不同的人生。" />
+<meta property="og:image" content="https://www.mileslab.work/assets/img/hero.webp" />
+<meta property="og:image:width" content="2400" />
+<meta property="og:image:height" content="1350" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:url" content="https://www.mileslab.work/" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23070706'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' fill='%23eae3d5' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
+<link rel="preload" href="assets/fonts/noto-serif-sc.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="canonical" href="https://www.mileslab.work/" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<noscript><style>.loader{display:none!important}.reveal{opacity:1!important;transform:none!important}.hero-title .line>span{transform:none!important}</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<!-- 载入 -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-brand">MILES</div>
+    <div class="loader-sub">正在装入胶片</div>
+    <div class="loader-bar"><span id="loaderBar"></span></div>
+    <div class="loader-pct" id="loaderPct">00</div>
+  </div>
+</div>
+
+<!-- 胶片层 -->
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"></span></div>
+
+<!-- 导航 -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="MILES 回到顶部">
+    <span class="brand-en">MILES</span>
+    <span class="brand-cn">剪辑师</span>
+  </a>
+
+  <nav class="nav-links" id="navLinks" aria-label="页面导航">
+    <a href="#prologue" data-nav="prologue"><i>00</i>序</a>
+    <a href="#slices" data-nav="slices"><i>01</i>切片</a>
+    <a href="#method" data-nav="method"><i>02</i>手法</a>
+    <a href="#contact" data-nav="contact"><i>03</i>合作</a>
+  </nav>
+
+  <div class="nav-meta">
+    <span class="tc" id="timecode" aria-hidden="true">00:00:00:00</span>
+    <button class="sound" id="soundBtn" type="button" aria-pressed="false" aria-label="打开环境声">
+      <span class="sound-dot"></span><span class="sound-label">声音</span>
+    </button>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="打开菜单">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-media" id="heroMedia">
+      <img src="assets/img/hero.webp" alt="" fetchpriority="high" decoding="async" />
+    </div>
+
+    <div class="reel" aria-hidden="true">
+      <svg viewBox="0 0 200 200" fill="none">
+        <circle cx="100" cy="100" r="96" stroke="currentColor" stroke-width=".8"/>
+        <circle cx="100" cy="100" r="62" stroke="currentColor" stroke-width=".8"/>
+        <circle cx="100" cy="100" r="10" stroke="currentColor" stroke-width=".8"/>
+        <g stroke="currentColor" stroke-width=".8">
+          <circle cx="100" cy="40" r="17"/><circle cx="152" cy="70" r="17"/>
+          <circle cx="152" cy="130" r="17"/><circle cx="100" cy="160" r="17"/>
+          <circle cx="48" cy="130" r="17"/><circle cx="48" cy="70" r="17"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <p class="kicker reveal" style="--d:.15s">FILM EDITOR — SHANGHAI / 2026</p>
+
+      <h1 class="hero-title">
+        <span class="line"><span>人生是</span></span>
+        <span class="line line-2"><span>一场体验</span></span>
+      </h1>
+
+      <div class="hero-sub reveal" style="--d:.55s">
+        <span class="hero-rule" aria-hidden="true"></span>
+        <p>让我们用一首歌，<br />一起体验不同的人生。</p>
+      </div>
+
+      <p class="hero-note reveal" style="--d:.75s">
+        我是 Miles，一名剪辑师。我把一首歌放进一段影像里，<br class="pc-only" />
+        看时间如何在一个人的身上经过。
+      </p>
+    </div>
+
+    <div class="hero-foot">
+      <a class="scroll-cue" href="#prologue">
+        <span class="scroll-word">向下 · 进入放映</span>
+        <span class="scroll-line" aria-hidden="true"></span>
+      </a>
+      <div class="hero-meta" aria-hidden="true">
+        <span>24 FPS</span><span>COLOR</span><span>SOUND ON</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 00 序 -->
+  <section class="section prologue" id="prologue">
+    <header class="sec-head reveal">
+      <span class="sec-no">00</span>
+      <span class="sec-label">序 / PROLOGUE</span>
+      <span class="sec-rule" aria-hidden="true"></span>
+    </header>
+
+    <div class="prologue-lines">
+      <p class="reveal" style="--d:.05s"><span>我坐在时间外面，</span></p>
+      <p class="reveal" style="--d:.15s"><span>看他们在歌里，</span></p>
+      <p class="reveal" style="--d:.25s"><span>活过一遍。</span></p>
+    </div>
+
+    <div class="prologue-body">
+      <div class="prologue-text">
+        <p class="reveal">
+          剪辑师的工作，是把散落的时间重新排好顺序。
+        </p>
+        <p class="reveal" style="--d:.08s">
+          我常常觉得，一首歌就是一个人一生的缩影——前奏是出生，副歌是相爱，间奏是沉默，尾奏是某天下午，门轻轻关上的声音。
+        </p>
+        <p class="reveal" style="--d:.16s">
+          我不参与他们的命运，只负责把音量调到刚好，让你听见心跳。
+        </p>
+        <p class="signature reveal" style="--d:.24s">—— Miles，上海</p>
+      </div>
+
+      <aside class="prologue-side reveal" style="--d:.2s">
+        <p class="vertical">以歌为镜 · 旁观人间</p>
+        <p class="side-note">每一首被反复播放的歌，<br />都藏着一段没说完的人生。</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 01 切片 -->
+  <section class="section slices" id="slices">
+    <header class="sec-head reveal">
+      <span class="sec-no">01</span>
+      <span class="sec-label">切片 / SLICES</span>
+      <span class="sec-rule" aria-hidden="true"></span>
+    </header>
+
+    <div class="slices-intro">
+      <h2 class="reveal">六首歌，<br />六段人生。</h2>
+      <p class="slices-note reveal" style="--d:.1s">
+        不是影评，是我在时间里看见的东西。<br />
+        每一期，一首歌，一段影像。
+      </p>
+    </div>
+
+    <div class="works" id="works" role="list">
+      <!-- JS 渲染 -->
+    </div>
+
+    <p class="works-hint reveal">— 点击任意一条，进入放映 —</p>
+  </section>
+
+  <!-- 02 手法 -->
+  <section class="section method" id="method">
+    <header class="sec-head reveal">
+      <span class="sec-no">02</span>
+      <span class="sec-label">手法 / METHOD</span>
+      <span class="sec-rule" aria-hidden="true"></span>
+    </header>
+
+    <blockquote class="method-quote reveal">
+      我不是在剪画面，<br />
+      我是在<span class="em">剪时间</span>。
+    </blockquote>
+
+    <div class="principles">
+      <article class="principle reveal">
+        <span class="p-no">01</span>
+        <h3>先听见，再看见</h3>
+        <p>声音先到，画面才有重量。一段人生的情绪，往往在开口之前就已经开始了。</p>
+      </article>
+      <article class="principle reveal" style="--d:.08s">
+        <span class="p-no">02</span>
+        <h3>留白是呼吸</h3>
+        <p>不放满。让沉默、空镜和一点点多余的停顿，替人物把话说完。</p>
+      </article>
+      <article class="principle reveal" style="--d:.16s">
+        <span class="p-no">03</span>
+        <h3>站在时间外面</h3>
+        <p>不替他们哭，也不替他们笑。只把镜头放远一点，让你自己走进去。</p>
+      </article>
+    </div>
+
+    <p class="method-note reveal">
+      我的剪辑台上没有技巧清单，只有三个问题：这段人生，应该在哪一秒被听见？应该留多少空白？看完之后，你还愿不愿意在自己的生活里，多停留一会儿？
+    </p>
+  </section>
+
+  <!-- 03 合作 -->
+  <section class="section contact" id="contact">
+    <header class="sec-head reveal">
+      <span class="sec-no">03</span>
+      <span class="sec-label">合作 / CONTACT</span>
+      <span class="sec-rule" aria-hidden="true"></span>
+    </header>
+
+    <div class="contact-inner">
+      <div class="contact-main">
+        <h2 class="reveal">如果你也有一首歌，<br />想替一段人生说话。</h2>
+        <p class="contact-text reveal" style="--d:.1s">
+          品牌影像、人物纪录、影视混剪、音乐短片，<br />
+          或者一个还没想清楚的故事。<br />
+          写信给我，我们从一首歌开始。
+        </p>
+        <a class="cta reveal" style="--d:.2s" href="mailto:hi@mileslab.work?subject=%E4%B8%80%E9%A6%96%E6%AD%8C%EF%BC%8C%E4%B8%80%E6%AE%B5%E4%BA%BA%E7%94%9F">
+          <span>写信给我</span>
+          <span class="cta-mail">hi@mileslab.work</span>
+          <span class="cta-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="contact-side reveal" style="--d:.15s">
+        <dl>
+          <dt>BASE</dt><dd>上海 · 也常在别的城市醒来</dd>
+          <dt>TAKE</dt><dd>品牌 / 纪录 / 影视 / 音乐</dd>
+          <dt>STATUS</dt><dd><span class="rec"></span> 正在接片</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 页脚 -->
+<footer class="footer">
+  <div class="footer-top">
+    <span class="footer-brand">MILES</span>
+    <span class="footer-line" aria-hidden="true"></span>
+    <span class="footer-tc" id="footerTimecode">00:00:00:00</span>
+  </div>
+  <p class="footer-quote">人生是一场体验，让我们用一首歌，一起体验不同的人生。</p>
+  <div class="footer-bottom">
+    <span>© 2026 mileslab.work</span>
+    <span>本站仍在剪辑中。</span>
+    <span>MADE WITH TIME</span>
+  </div>
+</footer>
+
+<!-- 悬停预览 -->
+<div class="work-preview" id="workPreview" aria-hidden="true">
+  <img id="workPreviewImg" alt="" />
+</div>
+
+<!-- 放映弹层 -->
+<div class="modal" id="workModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-bg" data-close></div>
+  <div class="modal-panel">
+    <button class="modal-close" id="modalClose" type="button" aria-label="关闭">✕</button>
+    <div class="modal-media"><img id="modalImg" alt="" /></div>
+    <div class="modal-body">
+      <div class="modal-eyebrow"><span id="modalNo">01</span><span id="modalType">电影</span><span id="modalYear">1995</span></div>
+      <h3 class="modal-title" id="modalTitle">一生所爱</h3>
+      <p class="modal-artist" id="modalArtist">卢冠廷</p>
+      <p class="modal-work" id="modalWork">电影《大话西游》</p>
+      <div class="modal-essay" id="modalEssay"></div>
+      <p class="modal-quote" id="modalQuote"></p>
+      <div class="modal-nav">
+        <button class="modal-prev" id="modalPrev" type="button">← 上一段</button>
+        <span class="modal-count" id="modalCount">01 / 06</span>
+        <button class="modal-next" id="modalNext" type="button">下一段 →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="data/works.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
