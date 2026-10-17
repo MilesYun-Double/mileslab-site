@@ -774,7 +774,8 @@ html.has-cursor [data-cursor] { cursor: none; }
 .cta {
   display: inline-flex;
   align-items: baseline;
-  gap: clamp(14px, 2vw, 26px);
+  flex-wrap: wrap;
+  gap: clamp(10px, 1.6vw, 22px);
   padding-bottom: 12px;
   border-bottom: 1px solid var(--line-strong);
   transition: color 0.45s, border-color 0.45s;
@@ -785,7 +786,8 @@ html.has-cursor [data-cursor] { cursor: none; }
 }
 .cta-mail {
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 8.5px;
+  word-break: break-all;
   letter-spacing: 0.16em;
   color: var(--ink-3);
   transition: color 0.45s;
