@@ -327,7 +327,7 @@ html.has-cursor [data-cursor] { cursor: none; }
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 0 var(--pad) clamp(150px, 19vh, 230px);
+  padding: clamp(88px, 11vh, 124px) var(--pad) clamp(120px, 16vh, 210px);
   overflow: hidden;
   isolation: isolate;
 }
